@@ -502,7 +502,7 @@ def f_collision(phi,v_flux,laplacian):
                 for i in range(0,21):
                     collision_1[i][j][k][ns]= (1/relax_t)*(1/Kn)*(1/Ma)*(v_flux[i][j][k][ns]+laplacian[i][j][k][ns])
                     phi[i][j][k][ns] += collision_1[i][j][k][ns] 
-    return(phi)
+    return np.copy(phi)
     
        
 
