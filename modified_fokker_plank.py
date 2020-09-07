@@ -151,7 +151,7 @@ def convect1(phi):
                 #No update for i =0 since there is no convection
                 for i in range(11,21): #1 to 10
                     phi[i][j][k][ns] = phi_1[i][j][k][ns]
-    return(phi)
+    return np.copy(phi)
 
 # phi_0 = maxwell()
 # phi_t=[]
@@ -235,7 +235,7 @@ def halfconvect(phi):
                 #No update for i =0 since there is no convection
                 for i in range(11,21): #1 to 10
                     phi[i][j][k][ns] = phi_1[i][j][k][ns]          
-    return(phi)
+    return np.copy(phi)
 
                     
     
